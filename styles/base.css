@@ -7,7 +7,7 @@
     --gray: #707070;
     --yellow: #f5d76e;
 
-    --heading-font: "Raleway", sans-serif;
+    --heading-font: Arial, Helvetica, sans-serif;
     --body-font: "Nunito", sans-serif;
 }
 
@@ -110,7 +110,7 @@ h1 {
 
 .pfp {
     width: 160px;
-    height: auto;
+    height: 152;
     display: block;
     border: 1px solid var(--gray);
     border-radius: 4px;
@@ -147,7 +147,7 @@ h1 {
 
 .flag img {
     width: 130px;
-    height: auto;
+    height: 65;
     display: block;
     margin: 0 auto 8px;
     border: 1px solid var(--gray);
