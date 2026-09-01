@@ -224,6 +224,7 @@ footer p {
     }
 
     .pfp {
+        height: auto;
         width: 140px;
         margin: 0 auto;
     }
@@ -239,6 +240,7 @@ footer p {
 
     .flag img {
         width: 160px;
+        height: auto;
     }
 
     .country-content > p {
