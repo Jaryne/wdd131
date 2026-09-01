@@ -2,6 +2,7 @@
     --dark: #303030;
     --blue: #304860;
     --light: #f5efef;
+    --white: #ffffff;
     --hover: #c97878;
     --gray: #999;
     --yellow: #f5d76e;
@@ -20,7 +21,6 @@ body {
     font-family: var(--body-font);
     background-color: var(--light);
     color: var(--dark);
-
     min-height: 100vh;
 }
 
@@ -33,16 +33,14 @@ header {
 #course-title {
     display: block;
     padding: 16px 0 18px;
-
     font-family: var(--heading-font);
     font-size: 1.3rem;
+    font-weight: bold;
 }
 
 nav {
     height: 40px;
-
     background-color: var(--dark);
-
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -53,6 +51,7 @@ nav a {
     font-size: 1rem;
     color: var(--light);
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
@@ -62,31 +61,136 @@ nav a:hover {
 main {
     max-width: 960px;
     margin: 0 auto;
-    padding: 28px 0 16px;
-
+    padding: 28px 0 20px;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 8px;
+    gap: 12px;
 }
 
 h1 {
     grid-column: 1 / -1;
-
     text-align: center;
-
     font-family: var(--heading-font);
     font-size: 2.2rem;
     font-weight: normal;
-
-    margin-bottom: 18px;
+    margin-bottom: 8px;
 }
 
 .card {
-    min-height: 400px;
-    background-color: var(--hover);
-
+    background-color: var(--white);
     border: 1px solid var(--gray);
     border-radius: 8px;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.card h2 {
+    background-color: var(--blue);
+    color: var(--light);
+    font-family: var(--heading-font);
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.profile {
+    padding: 20px;
+}
+
+.profile-p {
+    display: grid;
+    grid-template-columns: 1fr 160px;
+    gap: 20px;
+    align-items: start;
+}
+
+.profile-p p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.pfp {
+    width: 160px;
+    height: auto;
+    display: block;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+}
+
+.country {
+    margin: 0 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray);
+    text-align: center;
+}
+
+.country h3 {
+    font-family: var(--heading-font);
+    font-size: 1.15rem;
+}
+
+.country-content {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.country-content>p {  /* > means only the direct child paragraph (country description).*/
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.flag {
+    text-align: center;
+}
+
+.flag img {
+    width: 130px;
+    height: auto;
+    display: block;
+    margin: 0 auto 8px;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+}
+
+.flag p {
+    font-size: 0.85rem;
+    font-style: italic;
+    line-height: 1.3;
+}
+
+.source {
+    font-size: 0.75rem;
+    color: var(--gray);
+}
+
+.source a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.source a:hover {
+    color: var(--hover);
+}
+
+.resource-content {
+    width: fit-content;
+    margin: 100px auto;
+}
+
+.resource-content li {
+    margin-bottom: 12px;
+}
+
+.resource-content a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.resource-content a:hover {
+    color: var(--hover);
 }
 
 footer {
@@ -104,4 +208,45 @@ footer p {
 #lastModified {
     color: var(--yellow);
     font-size: 0.8rem;
+}
+
+@media (max-width: 700px) {
+    main {
+        width: 94%;
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .profile-p {
+        grid-template-columns: 1fr;
+    }
+
+    .pfp {
+        width: 140px;
+        margin: 0 auto;
+    }
+
+    .country-content {
+        grid-template-columns: 1fr;
+    }
+
+    .flag {
+        width: 160px;
+        margin: 0 auto;
+    }
+
+    .flag img {
+        width: 160px;
+    }
+
+    .country-content > p {
+        margin-top: 5px;
+    }
+
+    .resource-content {
+        margin: 40px auto;
+    }
 }
