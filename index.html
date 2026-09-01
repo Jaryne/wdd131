@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals | Jaryne Moraleda Manrique | Homepage applying HTML, CSS, and JS.">
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals | Jaryne Moraleda Manrique | Homepage applying HTML, CSS, and JS.">
     <meta name="author" content="Jaryne Manrique">
     <title>WDD 131 - Dynamic Web Fundamentals - Jaryne Moraleda Manrique</title>
 
     <meta property="og:title" content="Learning Activity 01 - Basic Layout">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jaryne.github.io/wdd131/index.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Nunito&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/base.css">
 
@@ -23,23 +28,74 @@
         <nav>
             <a href="https://linkedin.com/in/jaryne-manrique">LinkedIn</a>
             <a href="https://byupw.instructure.com/">Canvas</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&id=26-29#19">Scripture</a>
+            <a
+                href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&id=26-29#19">Scripture</a>
             <a href="http://jaryne.github.io/wdd131/final-project/index.html">Final Project</a>
         </nav>
     </header>
 
     <main>
-        <h1>Jaryne Manrique</h1>
-        <section class="card"></section>
-        <section class="card"></section>
+        <h1>Jaryne Moraleda Manrique</h1>
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="profile">
+                <div class="profile-p">
+                    <p>My name is Jaryne. I am from the province of Rizal, Philippines. I am currently a student in
+                        Brigham Young University - Idaho. I read, write, and code. I have no license but I must drive.
+                    </p>
+                    <img src="images/me.webp" alt="Jaryne Portrait" class="pfp">
+                </div>
+            </div>
+
+            <div class="country">
+                <h3>Rizal, Philippines</h3>
+            </div>
+
+            <div class="country-content">
+                <img src="images/flag.webp" alt="The Phillipine Flag">
+                <p>The Philippines Flag</p>
+
+                <p>The Philippines is an archipelagic country in Southeast Asia.
+                    Located in the western Pacific Ocean, it consists of about 7,641 islands,
+                    with a total area of about 300,000 square kilometers.
+                    The islands are broadly categorized in three main geographical divisions.
+                    From north to south, the divisions are: Luzon, Visayas, and Mindanao.
+                    With a population of over 114 million, it is the world's twelfth-most-populous country.</p>
+            </div>
+        </section>
+        
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <div class="resource-content">
+                <ul>
+                    <li><a href="">Dev.to Community</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">Smashing Magazine</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">CSS Tricks</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">W3 Schools</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">Udemy</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">Lorem Ipsum Image Placeholder</a></li>
+                </ul>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>
-            <span id="currentyear"></span> Jaryne Manrique | The Philippines
+            &copy <span id="currentyear"></span> | Jaryne Manrique | The Philippines
         </p>
         <p id="lastModified"></p>
     </footer>
 
 </body>
+
 </html>
