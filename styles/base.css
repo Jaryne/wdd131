@@ -110,7 +110,7 @@ h1 {
 
 .pfp {
     width: 160px;
-    height: 152px;
+    height: auto;
     display: block;
     border: 1px solid var(--gray);
     border-radius: 4px;
@@ -147,7 +147,7 @@ h1 {
 
 .flag img {
     width: 130px;
-    height: 65;
+    height: auto;
     display: block;
     margin: 0 auto 8px;
     border: 1px solid var(--gray);
@@ -224,7 +224,7 @@ footer p {
     }
 
     .pfp {
-        height: 132px;
+        height: auto;
         width: 140px;
         margin: 0 auto;
     }
@@ -240,7 +240,7 @@ footer p {
 
     .flag img {
         width: 160px;
-        height: 95px;
+        height: auto;
     }
 
     .country-content > p {
