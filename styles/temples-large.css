@@ -1,0 +1,32 @@
+@media screen and (min-width: 700px) {
+    header {
+        padding: 1rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        width: auto;
+        flex-direction: row;
+        margin-left: auto;
+        padding: 0;
+        gap: 4rem;
+
+        max-height: none;
+        opacity: 1;
+        overflow: visible;
+        transition: none;
+    }
+
+    .album-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        max-width: 800px;
+        margin: 0 auto 3rem;
+        padding: 0 1rem;
+    }
+}

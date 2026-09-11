@@ -11,6 +11,11 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jaryne.github.io/wdd131/temples.html">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"></noscript>
+    
     <link rel="stylesheet" href="styles/temple.css">
     <link rel="stylesheet" href="styles/temples-large.css">
 
@@ -20,31 +25,34 @@
 <body>
     <header>
         <h3>Temple Album</h3>
-        <nav>
-            <a href="">Home</a>
-            <a href="">Old</a>
-            <a href="">New</a>
-            <a href="">Large</a>
-            <a href="">Small</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+        <nav id="nav-menu">
+            <a href="#">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
         </nav>
     </header>
 
     <main>
-        <h1></h1>
-        <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
-        <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
-        <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
-        <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
-        <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
-        <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
-        <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
-        <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
-        <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
+        <h1>Home</h1>
+        <div class="album-grid">
+            <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
+            <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
+            <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
+            <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
+            <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
+            <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
+            <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
+            <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
+            <figure><img src="images/029-Manila-Philippines-Temple.webp" alt="Manila Temple, Philippines"> <figcaption>Fig. 1 - Manila Temple</figcaption></figure>
+        </div>
     </main>
 
     <footer>
         <p>
-            &copy; <span id="currentyear"></span> | Jaryne Manrique | The Philippines
+            &copy; <span id="currentyear"></span> | Jaryne Manrique | The Republic of the Philippines
         </p>
         <p id="lastModified"></p>
     </footer>
