@@ -110,6 +110,8 @@ main h1 {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
+    aspect-ratio: 380 / 285;
 }
 
 footer {
