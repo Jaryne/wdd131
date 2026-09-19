@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals | Jaryne Moraleda Manrique | A place I want to go.">
+    <meta name="author" content="Jaryne Manrique">
+    <title>WDD 131 - Dynamic Web Fundamentals - Jaryne Moraleda Manrique</title>
+
+    <meta property="og:title" content="Assignment 03 - Country Page">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jaryne.github.io/wdd131/place.html">
+    <title>[Place]</title>
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>BATANGAS, San Juan</h1>
+    </header>
+    <main>
+        <picture>
+            <source media="(min-width: 1024px)" srcset="images/sea-large.webp">
+            <source media="(max-width: 768px)" srcset="images/sea-small.webp">
+            <img src="https://images.pexels.com/photos/2254689/pexels-photo-2254689.jpeg" alt="Scenic view of the sea"
+                loading="lazy">
+        </picture>
+        <div class="overlay">
+            <div class="data-section">
+                <h3>Data</h3>
+
+                <p>
+                    <span class="label">Area :</span>
+                    <span>105.56 sq mi</span>
+
+                    <span class="label">Population :</span>
+                    <span>115,118</span>
+
+                    <span class="label">Capital :</span>
+                    <span>Batangas City</span>
+
+                    <span class="label">Languages :</span>
+                    <span>Tagalog, English</span>
+
+                    <span class="label">Currency :</span>
+                    <span>PHP</span>
+
+                    <span class="label">Time Zone :</span>
+                    <span>PST, UTC+8</span>
+
+                    <span class="label">Calling Code :</span>
+                    <span>+63</span>
+
+                    <span class="label">Internet TLD :</span>
+                    <span>.ph</span>
+                </p>
+            </div>
+            <div class="weather-section">
+                <h3>Weather <span class="weather-icon"></span></h3>
+
+                <p>
+                    <span class="label">Temperature :</span>
+                    <span>5 °C</span>
+
+                    <span class="label">Wind Speed :</span>
+                    <span>15 km/h</span>
+
+                    <span class="label">Wind Chill :</span>
+                    <span id="windchill"></span>
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Jaryne Manrique | The Republic of the Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+@media screen and (min-width: 768px) {
+    :root {
+        --darker: #151515;
+        --olive: #484830;
+        --beige: #D8C090;
+        --shadow: rgba(0, 0, 0, 0.5);
+        --transparent: rgb(72, 72, 48, 0.6);
+        --uniform: 2rem;
+    }
+
+    body {
+        background-color: var(--darker);
+    }
+
+    header,
+    footer {
+        width: 100%;
+        margin: 0;
+        padding: 1.25rem;
+        font-size: 20px;
+    }
+
+    footer p,
+    p,
+    span {
+        font-size: 16px;
+    }
+
+    main {
+        position: relative;
+        width: 100%;
+        min-height: 75vh;
+        overflow: hidden;
+    }
+
+    picture {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+
+    picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            transparent,
+            var(--darker) 15%,
+            var(--darker) 85%,
+            transparent
+        );
+
+        mask-image: linear-gradient(
+            to bottom,
+            transparent,
+            var(--darker) 15%,
+            var(--darker) 85%,
+            transparent
+        );
+    }
+
+    .overlay {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        min-height: 75vh;
+        padding: var(--uniform);
+    }
+
+    .data-section {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+    }
+
+    .weather-section {
+        position: absolute;
+        right: 2rem;
+        bottom: 2rem;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        text-align: left;
+    }
+
+    .data-section,
+    .weather-section {
+        position: absolute;
+        background-color: var(--transparent);
+        border: 1px solid var(--beige);
+        padding: 2.5rem 1.5rem 1.25rem;
+        border-radius: 0 8px 8px 8px;
+        width: 320px;
+        max-width: calc(100% - 4rem);
+        box-shadow: 0 4px 15px var(--shadow);
+    }
+
+    .data-section h3,
+    .weather-section h3 {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        margin: 0;
+        background-color: var(--beige);
+        color: var(--olive);
+        padding: 0.5rem 1rem;
+        font-size: var(--uniform);
+        font-weight: bold;
+        border: 1px solid var(--beige);
+        border-radius: 0 0 8px 0;
+    }
+
+    .data-section p,
+    .weather-section p {
+        padding-top: var(--uniform);
+        line-height: 1.7rem;
+    }
+
+    .weather-icon {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        margin: 0;
+        background-image: none;
+    }
+
+    .weather-icon::before {
+        content: "🌥️";
+        font-size: 1.5rem;
+        display: inline-block;
+    }
+}
