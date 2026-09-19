@@ -38,13 +38,13 @@ footer {
 
 header h1,
 footer p,
-h2,
+h3,
 p,
 span {
     color: var(--beige);
 }
 
-h2 {
+h3 {
     font-size: 26px;
 }
 

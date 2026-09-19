@@ -98,8 +98,8 @@
         box-shadow: 0 4px 15px var(--shadow);
     }
 
-    .data-section h2,
-    .weather-section h2 {
+    .data-section h3,
+    .weather-section h3 {
         position: absolute;
         top: -1px;
         left: -1px;
