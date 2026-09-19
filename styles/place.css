@@ -36,6 +36,10 @@ footer {
     background-color: var(--darker);
 }
 
+h2 {
+    display: none;
+}
+
 header h1,
 footer p,
 h3,
