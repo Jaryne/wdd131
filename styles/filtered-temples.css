@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eae3d6;
+    font-family: "Nunito", sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    min-height: 60px;
+    background-color: #663535;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.7rem 1rem;
+}
+
+.album-grid h3,
+.album-grid p,
+header h3,
+header button,
+header p {
+    color: white;
+}
+
+.hamburger {
+    display: block;
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hamburger.active {
+    transform: rotate(90deg);
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        padding 0.4s ease;
+}
+
+nav.active {
+    max-height: 300px;
+    opacity: 1;
+    padding: 1rem 0;
+}
+
+nav button {
+    text-align: center;
+    background: none;
+    border: none;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+nav button:hover {
+    color: #c7833f;
+    transition: 0.25s;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main h1 {
+    text-align: center;
+    margin: 3rem 0 1.5rem;
+}
+
+
+.album-grid {
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.album-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 380 / 285;
+}
+  
+.album-grid section {
+    background-color: #663535;
+    padding-bottom: 0.5rem;
+}
+
+.album-grid h3 {
+    margin: 1rem 1rem 0.5rem;
+    font-size: 1.1rem;
+}
+
+.album-grid p {
+    margin: 0 1rem 0.5rem;
+    font-size: 0.9rem;
+}
+
+.album-grid .label {
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    min-height: 70px;
+    background-color: #663535;
+    padding: 1.3rem;
+}
+
+footer p {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+#lastModified {
+    font-size: 14px;
+    padding: 4px;
+}
