@@ -127,39 +127,54 @@ function renderTemples(filteredTemples) {
   `).join("");
 }
 
-renderTemples(temples);
 const mainHeading = document.querySelector("#heading");
-document.querySelector("#home").addEventListener("click", () => {
-  renderTemples(temples);
-  mainHeading.textContent = "Home";
+document.querySelector("#nav-menu").addEventListener("click", (event) => {
+  const link = event.target.closest("a");
+
+  if (!link) return;
+
+  event.preventDefault();
+
+  const filter = link.dataset.filter;
+
+  if (filter === "home") {
+    renderTemples(temples);
+    mainHeading.textContent = "Home";
+  }
+
+  if (filter === "old") {
+    const filtered = temples.filter(temple => {
+      const year = parseInt(temple.dedicated.split(",")[0]);
+      return year < 1900;
+    });
+
+    renderTemples(filtered);
+    mainHeading.textContent = "Old Temples";
+  }
+
+  if (filter === "new") {
+    const filtered = temples.filter(temple => {
+      const year = parseInt(temple.dedicated.split(",")[0]);
+      return year > 2000;
+    });
+
+    renderTemples(filtered);
+    mainHeading.textContent = "New Temples";
+  }
+
+  if (filter === "large") {
+    const filtered = temples.filter(temple => temple.area > 90000);
+
+    renderTemples(filtered);
+    mainHeading.textContent = "Large Temples";
+  }
+
+  if (filter === "small") {
+    const filtered = temples.filter(temple => temple.area < 15000);
+
+    renderTemples(filtered);
+    mainHeading.textContent = "Small Temples";
+  }
 });
 
-document.querySelector("#old").addEventListener("click", () => { // built before 1900
-  const oldTemples = temples.filter(temple => {
-    const year = parseInt(temple.dedicated.split(",")[0]);
-    return year < 1900;
-  });
-  renderTemples(oldTemples);
-  mainHeading.textContent = "Old Temples";
-});
-
-document.querySelector("#new").addEventListener("click", () => { // built after 2000
-  const newTemples = temples.filter(temple => {
-    const year = parseInt(temple.dedicated.split(",")[0]);
-    return year > 2000;
-  });
-  renderTemples(newTemples);
-  mainHeading.textContent = "New Temples";
-});
-
-document.querySelector("#large").addEventListener("click", () => { // larger than 90,000 square feet
-  const largeTemples = temples.filter(temple => temple.area > 90000);
-  renderTemples(largeTemples);
-  mainHeading.textContent = "Large Temples";
-});
-
-document.querySelector("#small").addEventListener("click", () => { // smaller than 15,000 square feet
-  const smallTemples = temples.filter(temple => temple.area < 15000);
-  renderTemples(smallTemples);
-  mainHeading.textContent = "Small Temples";
-});
+renderTemples(temples);

@@ -47,20 +47,14 @@ nav {
     display: flex;
     width: 100%;
     flex-direction: column;
-    align-items: center;
     gap: 1.2rem;
     margin: 0;
     padding: 0;
     text-align: center;
-
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-
-    transition:
-        max-height 0.4s ease,
-        opacity 0.3s ease,
-        padding 0.4s ease;
+    transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.4s ease;
 }
 
 nav.active {
@@ -69,17 +63,13 @@ nav.active {
     padding: 1rem 0;
 }
 
-nav button {
+nav a {
     text-align: center;
-    background: none;
-    border: none;
+    text-decoration: none;
     color: white;
-    font: inherit;
-    cursor: pointer;
-    padding: 0;
 }
 
-nav button:hover {
+nav a:hover {
     color: #c7833f;
     transition: 0.25s;
 }
