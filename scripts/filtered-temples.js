@@ -77,7 +77,7 @@ const temples = [
     dedicated: "1984, September, 25",
     area: 26683,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/_temp/029-Manila-Philippines-Temple.jpg"
+      "images/manila-temple.webp"
   },
   {
     templeName: "Hong Kong China",
@@ -85,7 +85,7 @@ const temples = [
     dedicated: "1996, May, 26",
     area: 51921,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/hong-kong-china-temple/hong-kong-china-temple-28125-main.jpg"
+      "images/hong-kong.webp"
   },
   {
     templeName: "San Pedro Sula Honduras",
@@ -93,7 +93,7 @@ const temples = [
     dedicated: "2024, October, 13",
     area: 35818,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/san-pedro-sula-honduras-temple/san-pedro-sula-honduras-temple-52518-main.jpg"
+      "images/honduras-temple.webp"
   },
   {
     templeName: "Star Valley Wyoming",
@@ -101,7 +101,7 @@ const temples = [
     dedicated: "2016, October, 30",
     area: 18609,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/star-valley-wyoming-temple/star-valley-wyoming-temple-14973-main.jpg"
+      "images/wyoming-temple.webp"
   },
   {
     templeName: "Stockholm Sweden",
@@ -109,7 +109,7 @@ const temples = [
     dedicated: "1985, July, 2",
     area: 31000,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/stockholm-sweden-temple/stockholm-sweden-temple-30267-main.jpg"
+      "images/sweden-temple.webp"
   }
 ];
 
