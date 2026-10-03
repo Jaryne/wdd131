@@ -170,7 +170,7 @@ document.querySelector("#nav-menu").addEventListener("click", (event) => {
   }
 
   if (filter === "small") {
-    const filtered = temples.filter(temple => temple.area < 15000);
+    const filtered = temples.filter(temple => temple.area < 10000);
 
     renderTemples(filtered);
     mainHeading.textContent = "Small Temples";
