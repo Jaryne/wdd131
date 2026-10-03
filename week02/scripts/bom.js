@@ -2,47 +2,53 @@ const input = document.querySelector('#favchap');
 const button = document.querySelector('button');
 const list = document.querySelector('#list');
 
-// no dupes
-function isDuplicate(value) {
-  for (let item of list.children) {
-    if (item.firstChild.textContent === value) {
-      return true;
-    }
-  }
-  return false;
-}
+let chaptersArray = getChapterList() || [];
+chaptersArray.forEach(chapter => {
+  displayList(chapter);
+});
 
-button.addEventListener('click', function() {
-  let value = input.value.trim();
-
-  if (value === "") {
+button.addEventListener('click', () => {
+  if (input.value.trim() !== '') {
+    displayList(input.value);
+    chaptersArray.push(input.value);
+    
+    setChapterList();
+    input.value = '';
     input.focus();
-    return;
-  }
 
-  if (isDuplicate(value)) {
+  } else {
     input.focus();
-    return;
   }
+});
 
-  // Create new list item
-  const li = document.createElement('li'); // 'li'/name doesn't have to match the constant
-  li.textContent = value;
+function displayList(item) {
+  let li = document.createElement('li');
+  let deletebutton = document.createElement('button');
 
-  // Delete button
-  const deleteButton = document.createElement('button');
-  deleteButton.textContent = '❌';
-  deleteButton.classList.add('delete'); // 'del is a strikethrough
-  deleteButton.setAttribute("aria-label", "Delete chapter");
-  deleteButton.addEventListener('click', function () {
+  li.textContent = item;
+  deletebutton.textContent = '❌';
+  deletebutton.classList.add('delete');
+
+  li.append(deletebutton);
+  list.append(li);
+
+  deletebutton.addEventListener('click', function () {
     list.removeChild(li);
+    deleteChapter(li.textContent);
     input.focus();
   });
+}
 
-  li.appendChild(deleteButton);
-  list.appendChild(li);
+function setChapterList() {
+  localStorage.setItem('myFavBOMList', JSON.stringify(chaptersArray));
+}
 
-  // Reset input
-  input.value = "";
-  input.focus();
-});
+function getChapterList() {
+  return JSON.parse(localStorage.getItem('myFavBOMList'));
+}
+
+function deleteChapter(chapter) {
+  chapter = chapter.slice(0, chapter.length - 1);
+  chaptersArray = chaptersArray.filter(item => item !== chapter);
+  setChapterList();
+}
