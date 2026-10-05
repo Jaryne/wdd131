@@ -75,6 +75,7 @@ label {
     pointer-events: none;
     color: #9caaba;
 }
+
 select,
 input[type="date"],
 input[type="text"],
@@ -118,7 +119,7 @@ textarea {
     width: 30px;
     height: 35px;
     color: #f4b400;
-    font-size: 32px;
+    font-size: 0;
     cursor: pointer;
     transition: color 0.2s ease;
 }
@@ -127,23 +128,24 @@ textarea {
     content: "\2606";
     position: absolute;
     line-height: 32px;
+    font-size: 32px;
 }
 
-.star-rating input:checked ~ label::before {
+.star-rating input:checked~label::before {
     content: "\2605";
 }
 
 .star-rating label:hover,
-.star-rating label:hover ~ label {
+.star-rating label:hover~label {
     color: #e76e17;
 }
 
 .star-rating label:hover::before,
-.star-rating label:hover ~ label::before {
+.star-rating label:hover~label::before {
     content: "\2605";
 }
 
-.star-rating input:focus-visible + label {
+.star-rating input:focus-visible+label {
     outline: 2px solid #1769aa;
     outline-offset: 3px;
 }
@@ -209,4 +211,32 @@ footer p {
 
 #lastModified {
     font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        width: 100%;
+        margin: 1rem auto;
+        padding: 0 0.75rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .confirmation {
+        padding: 1.5rem 1rem;
+    }
 }
