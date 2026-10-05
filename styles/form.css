@@ -29,7 +29,7 @@ main {
 
 form,
 .confirmation {
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
 }
@@ -73,7 +73,6 @@ label {
     right: 1rem;
     transform: translateY(-50%);
     pointer-events: none;
-    color: #9caaba;
 }
 
 select,
@@ -118,10 +117,11 @@ textarea {
 .star-rating > label {
     width: 30px;
     height: 35px;
-    color: #f4b400;
+    color: #17324d;
     font-size: 0;
     cursor: pointer;
     transition: color 0.2s ease;
+    
 }
 
 .star-rating label::before {
