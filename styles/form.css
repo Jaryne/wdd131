@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f4f7fb;
+    color: #222;
+    font-family: "Nunito", sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    padding: 1.5rem;
+    background-color: #17324d;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+form,
+.confirmation {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+form {
+    padding: 1.5rem;
+}
+
+fieldset {
+    padding: 1.5rem;
+    border: 2px solid #d6e0ea;
+    border-radius: 8px;
+}
+
+legend {
+    padding: 0.5rem 1rem;
+    background-color: #17324d;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin: 1rem 0 0.35rem;
+    font-weight: bold;
+}
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.select-wrapper select {
+    padding-right: 2.5rem;
+}
+
+.select-wrapper .select-arrow {
+    position: absolute;
+    top: 55%;
+    right: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #9caaba;
+}
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #9caaba;
+    border-radius: 5px;
+    font: inherit;
+    appearance: none;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+    border-color: #1769aa;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.star-rating {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+    margin: 0.5rem 0 1rem;
+}
+
+.star-rating input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.star-rating > label {
+    width: 30px;
+    height: 35px;
+    color: #f4b400;
+    font-size: 32px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.star-rating label::before {
+    content: "\2606";
+    position: absolute;
+    line-height: 32px;
+}
+
+.star-rating input:checked ~ label::before {
+    content: "\2605";
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #e76e17;
+}
+
+.star-rating label:hover::before,
+.star-rating label:hover ~ label::before {
+    content: "\2605";
+}
+
+.star-rating input:focus-visible + label {
+    outline: 2px solid #1769aa;
+    outline-offset: 3px;
+}
+
+.features label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+    font-weight: normal;
+}
+
+.features input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #1769aa;
+    color: #fff;
+    font: inherit;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type="submit"]:hover {
+    background-color: #0f4f82;
+}
+
+input[type="submit"]:focus-visible {
+    outline: 3px solid #9bd3ff;
+    outline-offset: 2px;
+}
+
+.confirmation {
+    padding: 2rem;
+    text-align: center;
+}
+
+.confirmation h2 {
+    color: #1769aa;
+}
+
+footer {
+    width: 100%;
+    min-height: 70px;
+    padding: 1rem;
+    background-color: #17324d;
+}
+
+footer p {
+    margin: 0.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+#lastModified {
+    font-size: 14px;
+}
