@@ -4,43 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Plan</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals | Jaryne Moraleda Manrique | Site Plan for FInal Project.">
+    <meta name="author" content="Jaryne Manrique">
+    <title>WDD 131 - Dynamic Web Fundamentals - Jaryne Moraleda Manrique</title>
 
-    <style>
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            max-width: 600px;
-            margin: 10rem auto;
-            padding: 0 20px;
-        }
-        h1 {
-            color: #ffffff;
-            font-size: 1.5rem;
-        }
+    <!-- Orbitron Black 900 + Bruno Ace -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Orbitron:wght@900&display=swap" rel="stylesheet">
 
-        p {
-            text-align: justify;
-        }
-    </style>
+    <link rel="icon" href="images/logo2.webp" type="image/x-icon">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <script src="scripts/siteplan.js" defer></script>
 </head>
 
 <body>
     <main>
-        <h1>Subject</h1>
-        <p>A character-focused informational website about a fictional character.</p>
+        <h1>NAME</h1>
+        <p>Spider-Man 2099 Archives</p>
 
-        <h1>Content</h1>
-        <p>The website will provide information about the selected character, including their background, personality,
-            notable traits, and other interesting details. It will also include images and a few sections highlighting
-            different aspects of the character.</p>
+        <h1>PURPOSE</h1>
+        <p>The purpose of the Miguel O'Hara Archives is to provide an interactive digital archive dedicated to Miguel O'Hara, also known as Spider-Man 2099. The site will present information about his identity, origin, abilities, relationship with Alchemax, and role within the Spider-Society, as well as his appearances in comics and films. Visitors will be able to explore the archive through an interactive futuristic interface and submit information through an archive submission form. The design is inspired by the cyberpunk setting of Spider-Man 2099 with my spin on the aesthetics, and uses interactive elements to make the character's information more engaging.</p>
 
-        <h1>Reason</h1>
-        <p>I chose this subject because I have always wanted to make a website about characters I like and share it with
-            my family and friends. I see this project as an opportunity to dedicate time to creating something like that
-            while also practicing the web development skills I have learned in this course.</p>
+        <h1>SCENARIOS</h1>
+        <p>
+        - Who is Miguel O'Hara, and how did he become Spider-Man 2099?<br>
+        - What abilities and characteristics make Miguel O'Hara different from other Spider-Man characters?<br>
+        - What is Miguel's connection to Alchemax and the Spider-Society?<br>
+        - Where can I learn more about Miguel O'Hara's appearances in comics and films?
+        </p>
+
+        <h1>COLOR SCHEMA</h1>
+        <p>
+            Interchangeable Primary and Secondary Colors: #A80000, #043a98<br>
+            Tertiary Color: #D87800<br>
+            Accents/Text Color: #F0C048, #000<br>
+            Shadow: #0c0c0e
+        </p>
+
+        <h1>TYPOGRAPHY</h1>
+        <p>
+            Font 1: Orbitron Black 900<br>
+            Font 2: Bruno Ace<br>
+            Font 3 (Optional): Captain Comic
+        </p>
+
+        <h1>LOGO</h1>
+        <div class="glitch-logo" id="glitchLogo">
+            <img src="images/logo1.webp" id="normalImage" alt="Logo">
+            <img src="images/logo2.webp" id="hoverImage" alt="Logo">
+            <canvas id="glitchCanvas"></canvas>
+        </div>
+
+        <div class="wireframe-container">
+            <h1>WIREFRAME</h1>
+            <h3>Desktop View</h3>
+            <div class="image-box">
+                <picture><img src="images/wireframe2099.png" alt="Wireframe Desktop"></picture>
+            </div>
+            <h3>Mobile View</h3>
+            <div class="image-box mobile-box">
+                <picture><img src="images/wireframe2099small.png" alt="Wireframe Mobile"></picture>
+            </div>
+        </div>
     </main>
 </body>
-
 </html>

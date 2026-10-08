@@ -1,0 +1,93 @@
+* {
+    background: #000000;
+}
+
+body {
+    border: 1px solid white;
+    padding: 2rem;
+    text-align: justify;
+    max-width: 600px;
+}
+
+h1, h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    color: aliceblue;
+}
+
+p {
+    font-family: 'Bruno Ace', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: aliceblue;
+}
+
+.image-box {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    margin-bottom: 1.5rem;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.image-box img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.mobile-box {
+    max-width: 380px;
+}
+
+.glitch-logo {
+    position: relative;
+    display: inline-block;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.glitch-logo img {
+    display: block;
+    width: 250px;
+    height: auto;
+}
+
+#hoverImage,
+#glitchCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#hoverImage {
+    opacity: 0;
+}
+
+#glitchCanvas {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.glitch-logo:hover #normalImage {
+    opacity: 0;
+}
+
+.glitch-logo:hover #glitchCanvas {
+    opacity: 1;
+}
+
+.glitch-logo.done #normalImage {
+    opacity: 0;
+}
+
+.glitch-logo.done #hoverImage {
+    opacity: 1;
+}
+
+.glitch-logo.done #glitchCanvas {
+    opacity: 0;
+}
