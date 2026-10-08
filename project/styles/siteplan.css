@@ -133,6 +133,10 @@ li:hover {
     border-color: #A80000;
 }
 
+.hide {
+    display: none;
+}
+
 .colors {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
