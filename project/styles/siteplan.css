@@ -14,7 +14,7 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background-image:
+    background:
         linear-gradient(rgba(240, 192, 72, .025) 1px, transparent 1px),
         linear-gradient(90deg, rgba(240, 192, 72, .025) 1px, transparent 1px);
     background-size: 50px 50px;
@@ -35,10 +35,6 @@ section {
     border-bottom: 1px solid rgba(240, 192, 72, .2);
 }
 
-header {
-    background: #0C0C0E;
-}
-
 .status {
     display: flex;
     justify-content: space-between;
@@ -49,10 +45,6 @@ header {
     letter-spacing: .15em;
 }
 
-.status span {
-    color: #F0C048;
-}
-
 h1,
 h2,
 h3 {
@@ -60,18 +52,36 @@ h3 {
     font-weight: 900;
 }
 
-h1 {
+.site-label {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    color: #F0C048;
+    font-size: 1.8rem;
+    letter-spacing: .08em;
+    margin: -0.45rem 0 0.95rem;
+}
+
+.site-title {
+    color: #FFFFFF;
+    font-size: clamp(1.7rem, 5vw, 3rem);
+    margin: 0 0 2rem;
+    line-height: 1.1;
+}
+
+.section-title {
     color: #F0C048;
     font-size: 1.8rem;
     letter-spacing: .08em;
     margin: 0 0 1.5rem;
 }
 
-h2 {
-    color: #FFFFFF;
-    font-size: clamp(1.7rem, 5vw, 3rem);
-    margin: 0 0 2rem;
-    line-height: 1.1;
+.wireframe .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    margin-top: .7rem;
+    background: #A80000;
 }
 
 h3 {
@@ -98,16 +108,6 @@ p {
     margin-bottom: 1rem;
 }
 
-.archive-section h1::after,
-.wireframe h1::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 2px;
-    margin-top: .7rem;
-    background: #A80000;
-}
-
 ul {
     list-style: none;
     padding: 0;
@@ -131,10 +131,6 @@ li::before {
 
 li:hover {
     border-color: #A80000;
-}
-
-.hide {
-    display: none;
 }
 
 .colors {
@@ -242,23 +238,16 @@ li:hover {
     inset: 0;
     width: 100%;
     height: 100%;
-}
-
-#hoverImage,
-#glitchCanvas {
     opacity: 0;
 }
 
-.glitch-logo:hover #normalImage {
+.glitch-logo:hover #normalImage,
+.glitch-logo.done #normalImage {
     opacity: 0;
 }
 
 .glitch-logo:hover #glitchCanvas {
     opacity: 1;
-}
-
-.glitch-logo.done #normalImage {
-    opacity: 0;
 }
 
 .glitch-logo.done #hoverImage {
@@ -271,9 +260,9 @@ li:hover {
 
 .image-box {
     padding: .6rem;
+    margin-bottom: 2rem;
     background: #0C0C0E;
     border: 1px solid #043A98;
-    margin-bottom: 2rem;
     box-shadow: inset 0 0 15px rgba(0, 0, 0, .8);
 }
 
@@ -306,7 +295,7 @@ footer {
         padding: 2rem 1.3rem;
     }
 
-    h2 {
+    .site-title {
         font-size: 1.8rem;
     }
 
@@ -320,5 +309,12 @@ footer {
 
     footer {
         padding: 1rem 1.3rem;
+    }
+}
+
+/* Touch screen */
+@media (hover: none) {
+    .glitch-logo {
+        cursor: pointer;
     }
 }
