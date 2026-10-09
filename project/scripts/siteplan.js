@@ -338,7 +338,7 @@ function glitch(t) {
         if (Math.random() < 0.65)
             blocks(a, 0.4);
 
-    // First glitch stage
+        // First glitch stage
     } else if (p < 0.38) {
         x.drawImage(a, 0, 0, w, h);
         layer(a, layers[0], 0.8); // Cyan
@@ -354,7 +354,7 @@ function glitch(t) {
             blackHalftoneDrag(a, 1);
         noise();
 
-    // Heavy glitch stage
+        // Heavy glitch stage
     } else if (p < 0.7) {
         x.drawImage(a, 0, 0, w, h);
         layer(a, layers[0], 1); // Cyan
@@ -384,7 +384,7 @@ function glitch(t) {
 
         noise();
 
-    // Transition to hover image
+        // Transition to hover image
     } else if (p < 0.9) {
         const img = Math.random() < 0.5 ? a : b;
         x.drawImage(img, 0, 0, w, h);
@@ -412,7 +412,7 @@ function glitch(t) {
 
         noise();
 
-    // Finish with hover image
+        // Finish with hover image
     } else {
         x.drawImage(b, 0, 0, w, h);
 
@@ -476,4 +476,16 @@ logo.addEventListener("mouseleave", () => {
 
     x.clearRect(0, 0, c.width, c.height);
     logo.classList.remove("done");
+});
+
+// Touchscreen
+logo.addEventListener("click", () => {
+    if (window.matchMedia("(hover: none)").matches) {
+        if (!running && !logo.classList.contains("done")) {
+            running = true;
+            blackTrails = [];
+            start = performance.now();
+            frame = requestAnimationFrame(glitch);
+        }
+    }
 });
