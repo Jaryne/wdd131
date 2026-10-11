@@ -1,0 +1,104 @@
+:root {
+  --red: #A80000;
+  --blue: #043A98;
+  --shadow: #0c0c0e;
+  --yellow: #D87800;
+  --color-link: #aaa;
+  --accent: #F0C048;
+}
+
+.glitch-logo {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  cursor: default;
+}
+
+.glitch-logo img {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
+#hoverImage,
+#glitchCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.glitch-logo:hover #normalImage,
+.glitch-logo.done #normalImage {
+  opacity: 0;
+}
+
+.glitch-logo:hover #glitchCanvas {
+  opacity: 1;
+}
+
+.glitch-logo.done #hoverImage {
+  opacity: 1;
+}
+
+.glitch-logo.done #glitchCanvas {
+  opacity: 0;
+}
+
+/* Touch screen */
+@media (hover: none) {
+  .glitch-logo {
+    cursor: pointer;
+  }
+}
+
+/* Blinker */
+@keyframes hudSettle {
+  0% {
+    color: #fff;
+    text-shadow: none;
+  }
+
+  15% {
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent);
+    opacity: 1;
+  }
+
+  30% {
+    color: var(--yellow);
+    text-shadow: none;
+    opacity: 0.4;
+  }
+
+  45% {
+    color: var(--accent);
+    text-shadow: 0 0 12px var(--accent);
+    opacity: 1;
+  }
+
+  60% {
+    color: var(--yellow);
+    text-shadow: none;
+    opacity: 0.6;
+  }
+
+  75% {
+    color: var(--accent);
+    text-shadow: 0 0 8px var(--accent);
+    opacity: 1;
+  }
+
+  90% {
+    color: var(--yellow);
+    text-shadow: none;
+    opacity: 0.8;
+  }
+
+  100% {
+    color: var(--accent);
+    text-shadow: 0 0 15px var(--accent), 0 0 5px var(--yellow);
+    opacity: 1; /* Settles right here stably */
+  }
+}
