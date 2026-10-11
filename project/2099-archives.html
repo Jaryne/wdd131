@@ -4,33 +4,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2099 Archives</title>
+  <title>Spider-Man 2099 Archives</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="images/logo2.webp" type="image/x-icon">
 
   <link rel="stylesheet" href="styles/large.css">
-  <link rel="stylesheet" href="styles/normal.css">
+  <link rel="stylesheet" href="styles/animations.css">
   <link rel="stylesheet" href="styles/small.css">
 
-  <script src="scripts/script.js" defer></script>
+  <script src="scripts/siteplan.js" defer></script>
+  <script src="scripts/burger.js" defer></script>
 </head>
 
 <body>
-  <div id="loading-screen">
+  <header>
     <div class="glitch-logo" id="glitchLogo">
       <img src="images/logo1.webp" id="normalImage" alt="Logo">
       <img src="images/logo2.webp" id="hoverImage" alt="Logo">
       <canvas id="glitchCanvas"></canvas>
     </div>
-  </div>
-
-  <header>
-    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
     <nav id="nav-menu">
       <a href="2099-archives.html">Archives</a>
       <a href="profile.html">Profile</a>
       <a href="media.html">Appearances</a>
-      <a href="form.html">Application</a>
+      <a href="form.html">Join</a>
     </nav>
   </header>
+
+  <main>
+    <section class="hero-section">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="images/hero.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <!-- Poster but with depth effect and parallax effect. -->
+      <!-- scroll down -->
+      <!-- watch interface -->
+  </main>
 
   <footer>
     <div class="footer-left">
@@ -39,18 +58,11 @@
 
     <div class="footer-right">
       <div class="footer-links">
-        <a href="#" class="footer-link">USER AGREEMENT</a>
-        <span class="divider">|</span>
         <a href="#" class="footer-link">PRIVACY POLICY</a>
+        <span class="divider">|</span>
+        <a href="reference.html" class="footer-link">REFERENCES</a>
       </div>
-      <p class="copyright">© Spider-Man 2099 Archives ALL RIGHTS RESERVED</p>
-    </div>
-
-    <div class="socials">
-      <a href="#"><img src="images/fb-icon.png" alt="Facebook icon"></a>
-      <a href="#"><img src="images/x-icon.png" alt="Twitter icon"></a>
-      <a href="#"><img src="images/ig-icon.png" alt="Instagram icon"></a>
-      <a href="#"><img src="images/tt-icon.png" alt="Tiktok icon"></a>
+      <p class="copyright">© Spider-Man 2O99 Archives ALL RIGHTS RESERVED</p>
     </div>
   </footer>
 </body>
