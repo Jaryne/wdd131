@@ -18,6 +18,7 @@
 
   <script src="scripts/siteplan.js" defer></script>
   <script src="scripts/burger.js" defer></script>
+  <script src="scripts/parallax.js" defer></script>
 </head>
 
 <body>
@@ -41,14 +42,12 @@
   </header>
 
   <main>
-    <section class="hero-section">
-      <video autoplay muted loop playsinline class="hero-video">
-        <source src="images/hero.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <!-- Poster but with depth effect and parallax effect. -->
-      <!-- scroll down -->
-      <!-- watch interface -->
+    <section class="hero">
+      <img class="layer layer--background" data-depth="1" src="images/background.webp" alt="" />
+      <img class="layer layer--birds" data-depth="2" src="images/light.webp" alt="" />
+      <img class="layer layer--character" data-depth="3" src="images/character.webp" alt="" />
+      <img class="layer layer--foreground" data-depth="4" src="images/shard2.webp" alt="" />
+    </section>
   </main>
 
   <footer>
