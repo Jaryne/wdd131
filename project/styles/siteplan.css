@@ -18,7 +18,7 @@ body::before {
         linear-gradient(rgba(240, 192, 72, .025) 1px, transparent 1px),
         linear-gradient(90deg, rgba(240, 192, 72, .025) 1px, transparent 1px);
     background-size: 50px 50px;
-    pointer-events: none;
+    /*pointer-events: none;*/
 }
 
 .archive {
