@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comic and animated appearances of Miguel O'Hara.">
+  <meta name="author" content="Jaryne Manrique">
+  <title>Appearances | Spider-Man 2099 Archives</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/logo2.webp" type="image/webp">
+
+  <script>document.documentElement.classList.add('js');</script> <!-- Adds the "js" class to the HTML element so CSS can apply styles specifically when JavaScript is enabled. -->
+  <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/small.css">
+
+  <script src="scripts/glitch.js" defer></script>
+  <script src="scripts/script.js" defer></script>
+</head>
+
+<body data-page="media">
+  <header>
+    <div class="glitch-logo" id="glitchLogo">
+      <img src="images/logo1.webp" id="normalImage" alt="Logo">
+      <img src="images/logo2.webp" id="hoverImage" alt="Logo">
+      <canvas id="glitchCanvas"></canvas>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+      aria-controls="nav-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav id="nav-menu" aria-label="Main">
+      <a href="2099-archives.html">Archives</a>
+      <a href="profile.html">Profile</a>
+      <a href="media.html" aria-current="page">Appearances</a>
+      <a href="apply.html">Join</a>
+    </nav>
+  </header>
+
+
+  <main class="dark skyline">
+    <div class="wrap">
+      <div class="page-head">
+        <div class="eyebrow micro"><span class="dot"></span>MEDIA ARCHIVE // SELECT ENTRY</div>
+        <h1>Appearances</h1>
+        <p style="max-width:620px">Pick a comic or film to open its record.</p>
+        <div class="tabs" role="tablist" aria-label="Media type">
+          <button class="tab" role="tab" data-filter="all" aria-selected="true">ALL</button>
+          <button class="tab" role="tab" data-filter="comic" aria-selected="false">COMICS</button>
+          <button class="tab" role="tab" data-filter="film" aria-selected="false">FILMS</button>
+        </div>
+        <div class="micro last-seen" id="lastSeen" aria-live="polite"></div>
+      </div>
+      <div class="roster" id="roster" aria-label="Media entries"></div>
+    </div>
+  </main>
+
+  <dialog class="sheet media-modal" id="mediaModal" aria-labelledby="mmTitle" style="width:min(780px,94vw)">
+    <div class="hud" data-shape="a" data-scan>
+      <button class="chip close" type="button" data-close aria-label="Close">CLOSE ✕</button>
+      <div class="mm-grid">
+        <div class="disc-wrap">
+          <div class="disc" aria-hidden="true"></div>
+          <div class="cover" id="mmCover"></div>
+        </div>
+        <div>
+          <span class="micro" id="mmMeta"></span>
+          <h2 id="mmTitle" style="margin-top:8px"></h2>
+          <p id="mmSummary"></p>
+          <div class="links"><a class="btn" id="mmLink" href="#" target="_blank" rel="noopener"></a></div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+
+  <footer>
+    <div class="footer-left">
+      <img src="images/logo2.webp" alt="Logo" class="logo" loading="lazy" width="84.5" height="120">
+    </div>
+
+    <div class="footer-right">
+      <div class="footer-links">
+        <a href="privacy.html" class="footer-link">PRIVACY POLICY</a>
+        <span class="divider">|</span>
+        <a href="reference.html" class="footer-link">REFERENCES</a>
+      </div>
+      <p class="copyright">© Spider-Man 2O99 Archives ALL RIGHTS RESERVED</p>
+    </div>
+  </footer>
+  <button class="fx-float" id="fxToggle" type="button" aria-pressed="true" title="Toggle animations">FX:ON</button>
+</body>
+</html>

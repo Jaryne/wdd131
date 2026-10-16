@@ -1,0 +1,1 @@
+Hello! These covers belong to their respective owners, artists, and sites, I don't own any of these images.

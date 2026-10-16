@@ -1,0 +1,311 @@
+.canon-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.canon-btn {
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid #00E5FF;
+    color: #00E5FF;
+    padding: 8px 16px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.canon-btn.active,
+.canon-btn:hover {
+    background: #00E5FF;
+    color: #0d1117;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+.stat-comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+    .stat-comparison-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.stat-card {
+    background: rgba(13, 17, 23, 0.7);
+    border: 1px solid rgba(255, 85, 0, 0.3);
+    padding: 16px;
+    min-width: 0;
+}
+
+.stat-card h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: #FF5500;
+    margin-bottom: 14px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 85, 0, 0.2);
+    padding-bottom: 8px;
+}
+
+.stat-bar-row {
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.stat-bar-row b {
+    display: block;
+    color: #00E5FF;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+.stat-bar-row p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.canon-note {
+    font-size: 12px;
+    line-height: 1.7;
+    opacity: 0.8;
+    margin-top: 14px;
+}
+
+.reference-link {
+    color: #00E5FF;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.reference-link:hover {
+    color: #F0C048;
+}
+
+.radar text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 8px;
+    fill: #F0C048;
+}
+
+.radar .radar-caption {
+    fill: #F0C048;
+    font-size: 7px;
+}
+
+.chapter.hud {
+    padding: 0;
+    margin-bottom: 24px;
+    border-bottom: 0;
+    filter: drop-shadow(0 0 10px rgba(216, 120, 0, 0.12));
+}
+
+.chapter.hud .hud-body {
+    padding: clamp(20px, 3vw, 34px);
+    min-width: 0;
+    color: #F0C048;
+}
+
+.chapter.hud .hud-body> :last-child {
+    margin-bottom: 0;
+}
+
+.chapter.hud .hud-body .facts {
+    margin-bottom: 0;
+}
+
+/* Keep long text and layouts inside their panels */
+.chapter.hud .hud-body p,
+.chapter.hud .hud-body li,
+.chapter.hud .hud-body span,
+.chapter.hud .hud-body .canon-note {
+    overflow-wrap: anywhere;
+    color: #F0C048;
+}
+
+.chapter.hud .split {
+    align-items: start;
+}
+
+.chapter.hud .radar {
+    min-width: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .chapter.hud {
+        margin-bottom: 18px;
+    }
+
+    .chapter.hud .hud-body {
+        padding: 20px 16px;
+    }
+
+    .chapter.hud .facts {
+        grid-template-columns: 1fr;
+    }
+
+    .chapter.hud .split {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* animated DNA sequencing display */
+.dna-sequence {
+    display: block;
+    overflow: hidden;
+    border: 1px solid rgba(216, 120, 0, 0.3);
+    background: rgba(10, 14, 36, 0.55);
+}
+
+.dna-bg {
+    fill: rgba(4, 58, 152, 0.08);
+}
+
+.dna-grid {
+    fill: none;
+    stroke: rgba(0, 229, 255, 0.08);
+}
+
+.dna-strand {
+    stroke-width: 2;
+    stroke-dasharray: 9 5;
+    animation: dnaFlow 2.4s linear infinite;
+}
+
+.dna-strand-a {
+    stroke: #FF5500;
+}
+
+.dna-strand-b {
+    stroke: #00E5FF;
+    animation-direction: reverse;
+    animation-duration: 3s;
+}
+
+.dna-pairs line {
+    stroke: #00E5FF;
+    stroke-opacity: 0.7;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: dnaPulse 1.8s ease-in-out infinite;
+}
+
+.dna-pairs line:nth-child(3n + 1) {
+    animation-delay: -0.3s;
+}
+
+.dna-pairs line:nth-child(3n + 2) {
+    animation-delay: -0.9s;
+}
+
+.dna-pairs line:nth-child(3n) {
+    stroke: #FF5500;
+    animation-delay: -1.4s;
+}
+
+.dna-sequence-labels {
+    animation: dnaLabels 2.4s steps(2, end) infinite;
+}
+
+.dna-scan {
+    stroke: #F0C048;
+    stroke-width: 1.5;
+    filter: drop-shadow(0 0 4px #F0C048);
+    animation: dnaSweep 4s linear infinite;
+}
+
+.dna-status {
+    animation: dnaStatus 1.5s steps(2, end) infinite;
+}
+
+@keyframes dnaFlow {
+    to {
+        stroke-dashoffset: -56;
+    }
+}
+
+@keyframes dnaPulse {
+
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: scaleY(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1.15);
+    }
+}
+
+@keyframes dnaLabels {
+
+    0%,
+    100% {
+        opacity: 0.65;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes dnaSweep {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(520px);
+    }
+}
+
+@keyframes dnaStatus {
+    50% {
+        opacity: 0.45;
+    }
+}
+
+html.fx-off .dna-strand,
+html.fx-off .dna-pairs line,
+html.fx-off .dna-sequence-labels,
+html.fx-off .dna-scan,
+html.fx-off .dna-status {
+    animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dna-strand,
+    .dna-pairs line,
+    .dna-sequence-labels,
+    .dna-scan,
+    .dna-status {
+        animation: none !important;
+    }
+}
+
+/* use the shared HUD panel engine */
+.chapter.hud .hud-fill {
+    background: rgba(216, 120, 0, 0.122);
+}
+
+.chapter.hud .facts .fact,
+.chapter.hud .stat-card {
+    background: #03020048;
+}
+
+.chapter.hud .stat-card h4,
+.chapter.hud .stat-bar-row b,
+.chapter.hud .fact b,
+.chapter.hud .timeline .when {
+    color: #F0C048;
+}
+

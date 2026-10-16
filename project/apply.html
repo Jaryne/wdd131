@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fictional Spider-Society recruitment form.">
+    <meta name="author" content="Jaryne Manrique">
+    <title>Join | Spider-Man 2099 Archives</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/logo2.webp" type="image/webp">
+
+    <script>document.documentElement.classList.add('js');</script> <!-- Adds the "js" class to the HTML element so CSS can apply styles specifically when JavaScript is enabled. -->
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/apply.css">
+
+    <script src="scripts/glitch.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+</head>
+
+<body data-page="apply">
+    <header>
+        <div class="glitch-logo" id="glitchLogo">
+            <img src="images/logo1.webp" id="normalImage" alt="Logo">
+            <img src="images/logo2.webp" id="hoverImage" alt="Logo">
+            <canvas id="glitchCanvas"></canvas>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav id="nav-menu" aria-label="Main">
+            <a href="2099-archives.html">Archives</a>
+            <a href="profile.html">Profile</a>
+            <a href="media.html">Appearances</a>
+            <a href="apply.html" aria-current="page">Join</a>
+        </nav>
+    </header>
+
+
+  <main class="dark skyline"><div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow micro"><span class="dot"></span>SPIDER-SOCIETY // RECRUITMENT INTAKE</div>
+      <h1>APPLICATION FORM</h1>
+      <p style="max-width:620px">This is a fictional form for fun. Fill it in and Miguel's system will evaluate you.</p>
+    </div>
+
+    <div class="apply-grid">
+      <div class="hud" data-shape="b" data-scan>
+        <form id="applyForm" novalidate>
+          <div class="field">
+            <label for="alias">ALIAS</label>
+            <input id="alias" name="alias" type="text" autocomplete="name" maxlength="24" required aria-describedby="alias-err">
+            <div class="err" id="alias-err" aria-live="polite"></div>
+          </div>
+          <div class="field">
+            <label for="dimension">DIMENSION</label>
+            <input id="dimension" name="dimension" type="text" list="dims" placeholder="Earth-928" maxlength="20" required aria-describedby="dimension-err">
+            <datalist id="dims"><option value="Earth-616"><option value="Earth-928"><option value="Earth-1610"><option value="Earth-65"></datalist>
+            <div class="err" id="dimension-err" aria-live="polite"></div>
+          </div>
+          <div class="field">
+            <label for="ability">ABILITY</label>
+            <input id="ability" name="ability" type="text" value="wall-crawling" maxlength="40" required aria-describedby="ability-err">
+            <div class="err" id="ability-err" aria-live="polite"></div>
+          </div>
+          <div class="field">
+            <label for="statement">APPLICATION STATEMENT</label>
+            <textarea id="statement" name="statement" maxlength="400" required aria-describedby="statement-err"></textarea>
+            <div class="micro count" id="count">0 / 400</div>
+            <div class="err" id="statement-err" aria-live="polite"></div>
+          </div>
+          <button class="btn" type="submit">Submit application</button>
+        </form>
+      </div>
+
+      <div class="hud" data-shape="e">
+        <div class="micro" style="margin-bottom:12px">INTAKE TERMINAL // AWAITING INPUT</div>
+        <div class="terminal" id="terminal" aria-live="polite"><span class="cursor"></span></div>
+      </div>
+    </div>
+  </div></main>
+
+  
+    <footer>
+        <div class="footer-left">
+            <img src="images/logo2.webp" alt="Logo" class="logo" loading="lazy" width="84.5" height="120">
+        </div>
+
+        <div class="footer-right">
+            <div class="footer-links">
+                <a href="privacy.html" class="footer-link">PRIVACY POLICY</a>
+                <span class="divider">|</span>
+                <a href="reference.html" class="footer-link">REFERENCES</a>
+            </div>
+            <p class="copyright">© Spider-Man 2O99 Archives ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+
+    <button class="fx-float" id="fxToggle" type="button" aria-pressed="true" title="Toggle animations">FX:ON</button>
+</body>
+</html>

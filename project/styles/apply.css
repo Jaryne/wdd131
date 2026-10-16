@@ -1,0 +1,16 @@
+/* APPLY PAGE: keep form fields inside their containers */
+body[data-page="apply"] .field {
+    min-width: 0;
+    background: transparent;
+}
+
+body[data-page="apply"] .field input,
+body[data-page="apply"] .field textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    background-color: rgba(216, 120, 0, 0.10);
+    color: #F0C048;
+    border-color: rgba(216, 120, 0, 0.65);
+}
