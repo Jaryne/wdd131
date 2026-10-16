@@ -409,7 +409,7 @@
       $("#mmMeta").textContent = `${it.type === "comic" ? "COMIC BOOK // " : "ANIMATED FILM // "}${it.year}`;
       $("#mmSummary").textContent = it.summary;
 
-      const a = $("#mmLink"); a.href = it.link; a.textContent = `${it.linkLabel}`;
+      const a = $("#mmLink"); a.href = it.link; a.textContent = `${it.linkLabel} ↗`; /* why does this turn into an emoji on some phones ? */
       const cover = $("#mmCover"); cover.innerHTML = "";
       cover.closest(".disc-wrap").classList.toggle("comic", it.type === "comic");
 
