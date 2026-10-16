@@ -1,13 +1,31 @@
-@media screen and (max-width: 768px) {
-    :root {
-        --red: #A80000;
-        --blue: #043A98;
-        --shadow: #0c0c0e;
-        --yellow: #D87800;
-        --color-link: #aaa;
-        --accent: #F0C048;
+/* PART 4: mobile */
+@media (max-width: 900px) {
+    .about-layout {
+        grid-template-columns: 1fr;
     }
 
+    .rail {
+        display: none;
+    }
+
+    .split {
+        grid-template-columns: 1fr;
+    }
+
+    .facts {
+        grid-template-columns: 1fr;
+    }
+
+    .apply-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-hint {
+        bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .hamburger {
         display: flex;
         flex-direction: column;
@@ -24,14 +42,14 @@
     .hamburger .bar {
         display: block;
         width: 100%;
-        height: 2px;
+        height: 2.4px;
         background-color: var(--red);
         border-radius: 1px;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .hamburger:hover .bar {
-        background-color: var(--red);
+        background-color: var(--accent);
     }
 
     .hamburger.active .bar:nth-child(1) {
@@ -89,20 +107,52 @@
         color: var(--accent) !important;
     }
 
+    header nav a[aria-current="page"]::after {
+        background: var(--accent);
+    }
+
     .hero {
         min-height: 520px;
     }
 
-    .hero__content {
-        left: 7%;
-        width: 86%;
+    .hero img.poster {
+        height: 520px;
+        max-height: none;
+        object-position: 30% 50%;
+        object-fit: cover;
     }
 
-    .hero__content h1 {
-        font-size: clamp(2.5rem, 12vw, 4.5rem);
+    .miguel {
+        left: 0;
+        width: 70%;
+    }
+
+    .hero-hint {
+        bottom: 60px;
+    }
+
+    .dialogue {
+        bottom: 56px;
     }
 
     footer {
         padding: 0;
+    }
+
+    .panel-grid .hud {
+        grid-column: 1 / -1 !important;
+    }
+
+    .mm-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .disc-wrap {
+        max-width: 200px;
+        margin-inline: auto;
+    }
+
+    .disc {
+        display: none;
     }
 }
