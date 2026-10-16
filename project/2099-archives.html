@@ -1,69 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spider-Man 2099 Archives</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive fan archive dedicated to Miguel O'Hara, Spider-Man 2099.">
+    <meta name="author" content="Jaryne Manrique">
+    <title>Spider-Man 2099 Archives</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo2.webp" type="image/webp">
 
-  <link rel="icon" href="images/logo2.webp" type="image/x-icon">
+    <script>document.documentElement.classList.add('js');</script> <!-- Adds the "js" class to the HTML element so CSS can apply styles specifically when JavaScript is enabled. -->
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/small.css">
 
-  <link rel="stylesheet" href="styles/large.css">
-  <link rel="stylesheet" href="styles/animations.css">
-  <link rel="stylesheet" href="styles/small.css">
-
-  <script src="scripts/siteplan.js" defer></script>
-  <script src="scripts/burger.js" defer></script>
-  <script src="scripts/parallax.js" defer></script>
+    <script src="scripts/glitch.js" defer></script>
+    <script src="scripts/script.js" defer></script>
 </head>
 
-<body>
-  <header>
-    <div class="glitch-logo" id="glitchLogo">
-      <img src="images/logo1.webp" id="normalImage" alt="Logo">
-      <img src="images/logo2.webp" id="hoverImage" alt="Logo">
-      <canvas id="glitchCanvas"></canvas>
-    </div>
-    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-    <nav id="nav-menu">
-      <a href="2099-archives.html">Archives</a>
-      <a href="profile.html">Profile</a>
-      <a href="media.html">Appearances</a>
-      <a href="form.html">Join</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <img class="layer layer--background" data-depth="1" src="images/background.webp" alt="" />
-      <img class="layer layer--birds" data-depth="2" src="images/light.webp" alt="" />
-      <img class="layer layer--character" data-depth="3" src="images/character.webp" alt="" />
-      <img class="layer layer--foreground" data-depth="4" src="images/shard2.webp" alt="" />
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-left">
-      <img src="images/logo2.webp" alt="Logo" class="logo">
+<body data-page="home">
+    <div class="intro" id="intro" role="status" aria-live="polite">
+        <div class="intro-inner">
+            <img class="intro-logo" src="images/logo2.webp" alt="Spider-Man 2099 Archives">
+            <div class="micro">ARCHIVES // SECURE CHANNEL</div>
+            <div class="boot-log" id="bootLog"></div>
+            <div class="progress"><i id="bootBar"></i></div>
+            <button class="chip skip" id="skipIntro" type="button">SKIP ▸</button>
+        </div>
     </div>
 
-    <div class="footer-right">
-      <div class="footer-links">
-        <a href="#" class="footer-link">PRIVACY POLICY</a>
-        <span class="divider">|</span>
-        <a href="reference.html" class="footer-link">REFERENCES</a>
-      </div>
-      <p class="copyright">© Spider-Man 2O99 Archives ALL RIGHTS RESERVED</p>
-    </div>
-  </footer>
+    <header>
+        <div class="glitch-logo" id="glitchLogo">
+            <img src="images/logo1.webp" id="normalImage" alt="Logo">
+            <img src="images/logo2.webp" id="hoverImage" alt="Logo">
+            <canvas id="glitchCanvas"></canvas>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+            aria-controls="nav-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav id="nav-menu" aria-label="Main">
+            <a href="2099-archives.html" aria-current="page">Archives</a>
+            <a href="profile.html">Profile</a>
+            <a href="media.html">Appearances</a>
+            <a href="apply.html">Join</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="sr-only">Spider-Man 2099 Archives</h1>
+        <section class="hero">
+            <img class="poster" src="images/poster1.webp" alt="Spider-Man 2099 hero image">
+            <button class="miguel" id="miguel" type="button" aria-label="Talk to Miguel"></button>
+            <span class="hero-hint micro" id="heroHint">▸ Click Miguel</span>
+            <div class="dialogue hud" id="dialogue" data-shape="c" aria-live="polite">
+                <span class="who micro">M. O'HARA // TRANSMISSION</span>
+                <p id="dialogueText"></p>
+            </div>
+        </section>
+        <section class="watch-stage dark skyline" aria-label="Archive interface">
+            <img class="watch-image" loading="lazy" width="1200" height="496" src="images/watch.webp" alt="Miguel's gizmo">
+            <div class="watch-shade" aria-hidden="true"></div>
+            <section class="console" aria-labelledby="consoleTitle">
+                <div class="eyebrow"><span class="status-dot"></span>SYSTEM // INTERFACE PANELS</div>
+                <h2 id="consoleTitle">Select a module</h2>
+                <div class="panel-grid">
+                    <button class="hud p1" type="button" data-shape="a" data-scan data-num="01" data-title="Identity"
+                        data-href="profile.html"
+                        data-info="Discover who Miguel O'Hara is, how Alchemax shaped him, what his powers are, and what drives him.">
+                        <span class="num micro">01 // PERSONNEL</span>
+                        <h3>Identity</h3>
+                        <p class="desc">Origin, powers and personality.</p>
+                    </button>
+
+                    <button class="hud p2" type="button" data-shape="b" data-num="02" data-title="Media Archive"
+                        data-href="media.html"
+                        data-info="Browse Miguel's comic book and animated film appearances. Explore the archive for titles, dates and sources.">
+                        <span class="num micro">02 // ARCHIVE</span>
+                        <h3>Media Archive</h3>
+                        <p class="desc">Comics, films and appearances.</p>
+                    </button>
+
+                    <button class="hud p3" type="button" data-shape="e" data-scan data-num="03"
+                        data-title="Society Application" data-href="apply.html"
+                        data-info="Explore a fictional Spider-Society application and receive a simulated result. Nothing is submitted to a real organization.">
+                        <span class="num micro">03 // ACCESS</span>
+                        <h3>Society Application</h3>
+                        <p class="desc">Request access to the Society.</p>
+                    </button>
+
+                    <button class="hud p4" type="button" data-shape="f" data-num="04" data-title="References"
+                        data-href="reference.html"
+                        data-info="Review the sources used for the facts, media information and images in this archive, rolled like end credits.">
+                        <span class="num micro">04 // DATABASE</span>
+                        <h3>References</h3>
+                        <p class="desc">Sources and image credits.</p>
+                    </button>
+
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- MODULE DIALOG -->
+    <dialog class="sheet" id="panelSheet" aria-labelledby="sheetTitle">
+        <div class="hud dialog-hud" data-shape="a" data-scan>
+            <div class="dialog-content">
+                <button class="chip close" type="button" data-close>
+                    CLOSE ✕
+                </button>
+
+                <p class="micro" id="sheetNum">MODULE // 00</p>
+                <h2 id="sheetTitle">Module title</h2>
+                <p id="sheetInfo">Module description.</p>
+                <a class="btn" id="sheetGo" href="profile.html">
+                    ENTER MODULE ↗
+                </a>
+            </div>
+        </div>
+    </dialog>
+
+    <footer>
+        <div class="footer-left">
+            <img src="images/logo2.webp" alt="Logo" class="logo" loading="lazy" width="84.5" height="120">
+        </div>
+        <div class="footer-right">
+            <div class="footer-links">
+                <a href="privacy.html" class="footer-link">PRIVACY POLICY</a>
+                <span class="divider">|</span>
+                <a href="reference.html" class="footer-link">REFERENCES</a>
+            </div>
+            <p class="copyright">© Spider-Man 2O99 Archives ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+    <button class="fx-float" id="fxToggle" type="button" aria-pressed="true" title="Toggle animations">FX:ON</button>
 </body>
-
 </html>
