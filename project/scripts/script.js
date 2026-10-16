@@ -134,9 +134,9 @@
     const finish = () => {
       intro.classList.add("done");
       document.body.classList.add("booted");
-      try { sessionStorage.setItem("archive2099.intro", "1"); } catch { /* ignore */ }
+      try { sessionStorage.setItem("archive2099.intro", "1"); } catch {}
     };
-    let seen = false; try { seen = sessionStorage.getItem("archive2099.intro") === "1"; } catch { /* ignore */ }
+    let seen = false; try { seen = sessionStorage.getItem("archive2099.intro") === "1"; } catch {}
     if (seen || !fxOn) finish();
     else {
       const log = $("#bootLog"), bar = $("#bootBar");
